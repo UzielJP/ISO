@@ -1,0 +1,104 @@
+Primera Parte:
+
+$ cd uziel
+-bash: cd: uziel: No such file or directory
+$ mkdir dir1
+$ cd dir1
+$ mkdir dir11
+$ cd ..
+$ cd dir1
+$ touch f3
+$ cd ..
+$ cd uziel
+-bash: cd: uziel: No such file or directory
+$ mkdir dir2
+$ cd dir2
+$ touch f4
+$ cd ..
+$ cd uziel
+-bash: cd: uziel: No such file or directory
+$ touch f1
+$ touch f2
+
+Segunda Parte:
+
+$ cd dir1
+$ mv f3 /home/uziel
+---
+$ cp f4 /home/uziel/dir1/dir11
+$ cd ..
+$ cd dir1
+$ ls
+f4
+---
+$ cp f4 /home/uziel/dir1/dir11/f7
+$ ls
+f4  f7
+---
+$ mkdir dircopy
+$ cp -r dir1 /home/uziel/dircopy
+$ cd dircopy
+---
+$ mv f1 archivo
+$ ls
+$ ls -l archivo
+---
+$ chmod o+rwx archivo
+$ ls -l archivo
+-rw-r--rwx 1 uziel uziel 0 Aug 19 15:24 archivo
+$ chmod g+x archivo
+$ chmod g-r archivo
+$ ls -l archivo
+-rw---xrwx 1 uziel uziel 0 Aug 19 15:24 archivo
+$ chmod g+x archivo
+$ ls -l archivo
+-rw---xrwx 1 uziel uziel 0 Aug 19 15:24 archivo
+---
+$ mv f3 f3.exe
+$ ls
+archivo  dir  dir1  dir11  dir2  dircopy  f2  f3.exe  iso
+$ cd dir2
+$ ls
+f4
+$ mv f4 f4.exe
+$ ls
+f4.exe
+---
+$ cd ..
+$ chmod 027 *.exe
+$ ls -l f3.exe
+-----w-rwx 1 uziel uziel 35 Aug 19 15:23 f3.exe
+$ cd dir2
+$ chmod 025 *.exe
+$ ls -l f4.exe
+-----w-r-x 1 uziel uziel 0 Aug 19 15:23 f4.exe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

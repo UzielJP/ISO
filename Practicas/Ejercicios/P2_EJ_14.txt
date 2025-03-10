@@ -1,0 +1,80 @@
+A)
+$ mkdir tmp
+$ cd tmp
+$ mkdir logs
+B)
+$ cd /var/log
+$ cd tmp
+$ mkdir logs
+$ cp -r log /tmp/logs/
+C)
+$ tar -cvf misLogs.tar logs
+E)
+$ cd /home/uziel/
+$ mkdir directorio1
+$ cp -r misLogs.tar directorio1
+F)
+$ cd /var/tmp
+$ rm misLogs.tar
+G)
+$ cd /home/uziel/directorio1/
+$ tar -xvf misLogs.tar
+$ cd logs
+$ tar -czvf archivoLog.tar.g alternatives.log bootstrap.log ubuntu-advantage.log home/uziel/directorio1/logs
+$ mv archivoLog.ar.gz /home/uziel/directorio1/
+$ cd ..
+$ tar -xzvf archivoLog.ar.gz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
